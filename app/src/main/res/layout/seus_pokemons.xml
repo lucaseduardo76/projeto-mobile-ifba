@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Cabeçalho -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btn_voltar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="Voltar" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seus Pokemons"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Grade de Pokémons -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <GridLayout
+            android:id="@+id/gridPokemons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:columnCount="3">
+
+            <!-- Card do Pokémon -->
+            <!-- Você pode repetir esse bloco para cada Pokémon -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/squirtle"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Squirtle"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#43"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pikachu"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#25"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ninetales"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#38"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/squirtle"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Squirtle"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#43"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pikachu"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#25"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ninetales"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#38"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/squirtle"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Squirtle"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#43"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pikachu"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#25"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ninetales"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#38"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/squirtle"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Squirtle"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#43"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pikachu"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#25"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_margin="6dp"
+                android:backgroundTint="#FAFAFA">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ninetales"
+                    android:contentDescription="Pokemon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pikachu"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#38"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+
+
+            <!-- Repita o card acima para outros pokémons -->
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>
