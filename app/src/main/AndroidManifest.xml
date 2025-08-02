@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,8 +22,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SeusPokemonsActivity" />
-        <activity android:name=".PokeViewActivity" />
+        <activity android:name=".views.SeusPokemonsActivity" />
+        <activity android:name=".views.PokeViewActivity" />
 
     </application>
 

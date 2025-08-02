@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingBottom="16dp"
-            android:text="Título"
+            android:text="Pokedex"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -36,14 +36,14 @@
 
         <!-- Pokémon do dia -->
         <TextView
+            android:id="@+id/titulo_pokemon_sorteado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="24dp"
             android:paddingBottom="8dp"
-            android:text="Pokemon do dia"
+            android:text="Pokémon sorteado"
             android:textSize="18sp"
             android:textStyle="bold" />
-
         <!-- Card do Pokémon do dia -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,52 +84,7 @@
                 android:text="Hiding in people's shadows at night..."
                 android:textSize="14sp" />
 
-            <!-- Tipos -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
-                    android:background="#D1C4E9"
-                    android:padding="6dp"
-                    android:text="Ghost"
-                    android:textColor="#000"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
-                    android:background="#F8BBD0"
-                    android:padding="6dp"
-                    android:text="Poison"
-                    android:textColor="#000"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
-                    android:background="#C8E6C9"
-                    android:padding="6dp"
-                    android:text="Você tem!"
-                    android:textColor="#000"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#E0E0E0"
-                    android:padding="6dp"
-                    android:text="Você não tem"
-                    android:textColor="#000"
-                    android:textSize="12sp" />
-            </LinearLayout>
         </LinearLayout>
 
         <!-- Seus Pokémons -->
@@ -163,112 +118,114 @@
             android:scrollbars="none" />
 
         <LinearLayout
+            android:id="@+id/containerPokemons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-            <!-- Card Pokémon -->
-            <LinearLayout
-                android:id="@+id/card_pokemon2"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:background="#FFFFFF"
-                android:backgroundTint="#FAFAFA"
-                android:elevation="4dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp">
+<!--            &lt;!&ndash; Card Pokémon &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/card_pokemon2"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:backgroundTint="#FAFAFA"-->
+<!--                android:elevation="4dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp">-->
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="Pikachu"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pikachu" />
+<!--                <ImageView-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:contentDescription="Pikachu"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/pikachu" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="Pikachu"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:text="Pikachu"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="#25"
-                    android:textColor="#757575"
-                    android:textSize="12sp" />
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="#25"-->
+<!--                    android:textColor="#757575"-->
+<!--                    android:textSize="12sp" />-->
+<!--            </LinearLayout>-->
 
-            <!-- Card 2 -->
-            <LinearLayout
-                android:id="@+id/card_pokemon"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:background="#FFFFFF"
-                android:elevation="4dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp">
+<!--            &lt;!&ndash; Card 2 &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/card_pokemon"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:elevation="4dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp">-->
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="Mew"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ninetales" />
+<!--                <ImageView-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:contentDescription="Mew"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/ninetales" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="Ninetales"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:text="Ninetales"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="#151"
-                    android:textColor="#757575"
-                    android:textSize="12sp" />
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="#151"-->
+<!--                    android:textColor="#757575"-->
+<!--                    android:textSize="12sp" />-->
+<!--            </LinearLayout>-->
 
-            <!-- Card 2 -->
-            <LinearLayout
-                android:id="@+id/card_pokemon1"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:background="#FFFFFF"
-                android:elevation="4dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp">
+<!--            &lt;!&ndash; Card 2 &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/card_pokemon1"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:elevation="4dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp">-->
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="Mew"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/squirtle" />
+<!--                <ImageView-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:contentDescription="Mew"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/squirtle" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="Squirtle"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:text="Squirtle"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="#151"
-                    android:textColor="#757575"
-                    android:textSize="12sp" />
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="#151"-->
+<!--                    android:textColor="#757575"-->
+<!--                    android:textSize="12sp" />-->
+<!--            </LinearLayout>-->
 
 
             <TextView
